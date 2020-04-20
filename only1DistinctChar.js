@@ -6,7 +6,7 @@ var distinct1charInOrder = function (s1, s2) {
       let differ = false;
       let len = Math.min(s1.length, s2.length);
       for(let i = 0; i < len; i++) {
-        if(s1.charAt(i) != s2.charAt(i)) {
+        if(s1.charAt(i) !== s2.charAt(i)) {
           if(differ) {
             return false;
           } else {
@@ -33,11 +33,11 @@ var distinct1charNotInOrder = function(s1, s2) {
         arr[i]--;
     }
     for(let i = 0; i < arr.length; i++) {
-        if(arr[i] == 1) {
+        if(arr[i] === 1) {
             count++;
-        } else if(arr[i] == -1) {
+        } else if(arr[i] === -1) {
             minusCount++;
-        } else if(arr[i] != 0) {
+        } else if(arr[i] !== 0) {
             return false;
         }
     }
