@@ -21,4 +21,4 @@ function findThirdLargest(nums){
 }
 
 
-console.log(findThirdLargest([1,2,3,22,4,5,13,30,6,7,8,9,10]));
+console.log(findThirdLargest([1,2,3,22,22,22,30,30,4,5,13,13,13,30,6,7,8,9,10]));
