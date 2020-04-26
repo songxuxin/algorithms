@@ -27,3 +27,55 @@ var twoSum = function(nums, target) {
     }
     return [];
 };
+
+console.log(twoSum([6,2,5,13,7], 9));
+
+//if the question only wants to out put numbers, not index
+var twoSum2 = function(nums, target){
+	nums.sort( (a, b) => a - b);
+	let left = 0;
+	let right = nums.length - 1;
+	while(left < right){
+		if(nums[left] + nums[right] === target){
+			return [nums[left], nums[right]];
+		}else if(nums[left] + nums[right] < target){
+			left++;
+		}else{
+			right--;
+		}
+	}
+	return [];
+}
+
+console.log(twoSum2([6,2,5,13,7], 9));
+
+//method use object map = {}
+var twoSum3 = function(nums, target){
+	let map = {};
+	for(let i = 0; i<nums.length; i++){
+		let secNumber = target - nums[i];
+		if(map[secNumber]){
+			return [i, map[secNumber]];
+		}
+		map[nums[i]] = i;
+	}
+	return [];
+}
+console.log(twoSum3([6,2,5,13,7], 9));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
