@@ -62,6 +62,8 @@ var twoSum3 = function(nums, target){
 	return [];
 }
 console.log(twoSum3([6,2,5,13,7], 9));
+console.log(twoSum3([2,4,3,5], 5));
+
 
 
 
